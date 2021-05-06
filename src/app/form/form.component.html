@@ -1,0 +1,43 @@
+<br>
+<form [formGroup] = "EmployeeForm" #data (ngSubmit)='OnSearch(data)'>
+    <h3><b><i>Enter First Name :</i></b></h3>
+    <mat-form-field appearance = "fill">
+       
+       <input matInput placeholder = "First_Name" formControlName="First_Name">
+    </mat-form-field>
+    
+    <h3><b><i>Enter Department :</i></b></h3>
+    <mat-form-field appearance = "fill">
+        <input matInput placeholder = "Dept"  formControlName="Dept">
+    </mat-form-field>
+    <br>
+    <button class = "button" type = "submit" (click)= "OnSearch">search</button>
+    <br>
+    <br>
+</form>
+<div>
+    <table class="table">
+        <thead style="background: rgb(92, 92, 90);">
+          <tr>
+            <th>EMP ID</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>GENDER</th>
+            <th>DEPARTMENT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of details">
+            <td>{{emp.emp_ID}}</td>
+            <td>{{emp.first_Name}}</td>
+            <td>{{emp.last_Name}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.dept}}</td>
+            
+          </tr>
+        </tbody>
+    
+      </table>
+    
+    
+    </div>

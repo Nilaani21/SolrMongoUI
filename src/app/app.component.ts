@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { SearchComponent } from './search/search.component';
+import {SolrService} from './solr.service';
+
 
 @Component({
   selector: 'app-root',
